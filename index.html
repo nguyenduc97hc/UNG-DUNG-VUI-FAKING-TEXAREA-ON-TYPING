@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <form>
+        <textarea cols="40" rows="10" onkeydown="typeTextarea(this,event)"></textarea>
+    </form>
+</center>
+    <script>
+        let array = ["T","Ô","I"," ","L","À"," ","M","Ộ","T"," ","Đ","Ứ","A"," ","N","G","Ố","C"];
+        var i = 0;
+
+        function typeTextarea(obj,event) {
+            event.preventDefault();
+            obj.value += array[i];
+            i++;
+            if (i == array.length+1) {
+                i = 0;
+                obj.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
